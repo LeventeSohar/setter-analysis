@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "clip": {
+    "id": "match01_rally0007",
+    "sourceFile": "match01.mp4",
+    "duration": 12.0,
+    "frameRate": 60.0,
+    "resolution": {
+      "width": 2898,
+      "height": 1870
+    }
+  },
+  "calibration": {
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "courtLines": [
+      {
+        "start": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "end": {
+          "x": 100.0,
+          "y": 0.0
+        }
+      }
+    ],
+    "confidence": 0.82
+  },
+  "frames": [
+    {
+      "index": 0,
+      "timestamp": 0.0,
+      "ballPosition": {
+        "x": 12.5,
+        "y": 40.0
+      }
+    },
+    {
+      "index": 1,
+      "timestamp": 0.016666666666666666,
+      "ballPosition": null
+    }
+  ],
+  "observations": [
+    {
+      "frameIndex": 0,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 100.0,
+        "y": 200.0,
+        "width": 40.0,
+        "height": 90.0
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 6.0
+      }
+    },
+    {
+      "frameIndex": 1,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 104.0,
+        "y": 202.0,
+        "width": 40.0,
+        "height": 90.0
+      },
+      "courtPosition": {
+        "x": 4.6,
+        "y": 6.1
+      }
+    },
+    {
+      "frameIndex": 0,
+      "trackId": 7,
+      "boundingBox": {
+        "x": 800.0,
+        "y": 210.0,
+        "width": 38.0,
+        "height": 88.0
+      },
+      "courtPosition": {
+        "x": 3.0,
+        "y": 12.5
+      }
+    }
+  ],
+  "players": [
+    {
+      "trackId": 3,
+      "team": "NEAR",
+      "role": "SETTER"
+    },
+    {
+      "trackId": 7,
+      "team": "FAR",
+      "role": "OTHER"
+    },
+    {
+      "trackId": 9,
+      "team": null,
+      "role": null
+    }
+  ],
+  "teams": [
+    {
+      "side": "NEAR",
+      "isAnalysed": true
+    },
+    {
+      "side": "FAR",
+      "isAnalysed": false
+    }
+  ]
+}
