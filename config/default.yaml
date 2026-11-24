@@ -1,0 +1,50 @@
+# Every tunable value in the pipeline.
+#
+# A key set to `null` is declared but not set. Reading it raises
+# MissingConfigKeyError, so an unchosen threshold fails at the point of use
+# instead of behaving as zero. The keys for unwritten stages are listed that
+# way on purpose: this file is the register of what still has to be chosen.
+#
+# Court dimensions are deliberately absent. They are sport constants and live
+# as defaults on CourtModel (NFR-R5); NFR-R4 governs thresholds only.
+
+detector:
+  # Minimum YOLO class confidence for a player or ball box to be kept.
+  confidence: null
+  # Boxes shorter than this many pixels are discarded as noise.
+  min_box_height: null
+  # Pixels added around a box before a crop is passed to a later stage.
+  crop_margin: null
+
+sampling:
+  # Frames to step between full detection passes mid-rally.
+  stride: null
+  # Frames either side of serve contact to detect densely.
+  serve_window: null
+  # Frames either side of set contact to detect densely.
+  set_window: null
+
+calibration:
+  # Below this homography confidence the clip is reported unusable.
+  min_confidence: null
+
+teams:
+  # Tracks with fewer observations than this are not assigned a side.
+  min_track_observations: null
+
+rotation:
+  # Frames from the clip start used to take each track's reference position.
+  reference_window_frames: 30
+  # Tracks with fewer observations than this are ignored by the classifier.
+  min_track_observations: 1
+  # Metres of gap between the front and back row rank groups for full
+  # confidence in the row split.
+  min_row_margin: 1.0
+  # Metres of gap between adjacent players within a row for full confidence
+  # in the in-row ordering.
+  min_slot_margin: 0.75
+
+setter:
+  # Gap between the best and second-best setter candidate below which the
+  # role is reported UNKNOWN rather than guessed.
+  ambiguity_margin: null

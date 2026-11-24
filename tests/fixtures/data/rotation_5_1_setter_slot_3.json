@@ -1,0 +1,525 @@
+{
+  "schemaVersion": "0.1.0",
+  "clip": {
+    "id": "fixture-5-1-setter-slot-3",
+    "sourceFile": "synthetic:5-1-rotation-fixture",
+    "duration": 2.033333333333333,
+    "frameRate": 30.0,
+    "resolution": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "calibration": {
+    "transform": [
+      [
+        0.015625,
+        0.0,
+        -5.5
+      ],
+      [
+        0.0,
+        -0.03125,
+        20.3125
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "courtLines": [],
+    "confidence": 1.0
+  },
+  "frames": [
+    {
+      "index": 0,
+      "timestamp": 0.0,
+      "ballPosition": null
+    },
+    {
+      "index": 15,
+      "timestamp": 0.5,
+      "ballPosition": null
+    },
+    {
+      "index": 30,
+      "timestamp": 1.0,
+      "ballPosition": null
+    },
+    {
+      "index": 45,
+      "timestamp": 1.5,
+      "ballPosition": null
+    },
+    {
+      "index": 60,
+      "timestamp": 2.0,
+      "ballPosition": null
+    }
+  ],
+  "observations": [
+    {
+      "frameIndex": 0,
+      "trackId": 1,
+      "boundingBox": {
+        "x": 614.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 15,
+      "trackId": 1,
+      "boundingBox": {
+        "x": 614.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 30,
+      "trackId": 1,
+      "boundingBox": {
+        "x": 614.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 45,
+      "trackId": 1,
+      "boundingBox": {
+        "x": 614.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 60,
+      "trackId": 1,
+      "boundingBox": {
+        "x": 614.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 0,
+      "trackId": 2,
+      "boundingBox": {
+        "x": 422.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 15,
+      "trackId": 2,
+      "boundingBox": {
+        "x": 422.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 30,
+      "trackId": 2,
+      "boundingBox": {
+        "x": 422.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 45,
+      "trackId": 2,
+      "boundingBox": {
+        "x": 422.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 60,
+      "trackId": 2,
+      "boundingBox": {
+        "x": 422.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 0,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 419.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 15,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 419.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 30,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 419.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 45,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 419.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 60,
+      "trackId": 3,
+      "boundingBox": {
+        "x": 419.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 1.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 0,
+      "trackId": 4,
+      "boundingBox": {
+        "x": 611.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 15,
+      "trackId": 4,
+      "boundingBox": {
+        "x": 611.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 30,
+      "trackId": 4,
+      "boundingBox": {
+        "x": 611.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 45,
+      "trackId": 4,
+      "boundingBox": {
+        "x": 611.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 60,
+      "trackId": 4,
+      "boundingBox": {
+        "x": 611.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 4.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 0,
+      "trackId": 5,
+      "boundingBox": {
+        "x": 803.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 15,
+      "trackId": 5,
+      "boundingBox": {
+        "x": 803.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 30,
+      "trackId": 5,
+      "boundingBox": {
+        "x": 803.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 45,
+      "trackId": 5,
+      "boundingBox": {
+        "x": 803.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 60,
+      "trackId": 5,
+      "boundingBox": {
+        "x": 803.8,
+        "y": 413.0,
+        "width": 56.400000000000006,
+        "height": 141.0
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 3.0
+      }
+    },
+    {
+      "frameIndex": 0,
+      "trackId": 6,
+      "boundingBox": {
+        "x": 806.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 15,
+      "trackId": 6,
+      "boundingBox": {
+        "x": 806.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 30,
+      "trackId": 6,
+      "boundingBox": {
+        "x": 806.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 45,
+      "trackId": 6,
+      "boundingBox": {
+        "x": 806.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 7.5
+      }
+    },
+    {
+      "frameIndex": 60,
+      "trackId": 6,
+      "boundingBox": {
+        "x": 806.5,
+        "y": 282.5,
+        "width": 51.0,
+        "height": 127.5
+      },
+      "courtPosition": {
+        "x": 7.5,
+        "y": 7.5
+      }
+    }
+  ],
+  "players": [
+    {
+      "trackId": 1,
+      "team": "NEAR",
+      "role": "SETTER"
+    },
+    {
+      "trackId": 2,
+      "team": "NEAR",
+      "role": "OTHER"
+    },
+    {
+      "trackId": 3,
+      "team": "NEAR",
+      "role": "OTHER"
+    },
+    {
+      "trackId": 4,
+      "team": "NEAR",
+      "role": "OTHER"
+    },
+    {
+      "trackId": 5,
+      "team": "NEAR",
+      "role": "OTHER"
+    },
+    {
+      "trackId": 6,
+      "team": "NEAR",
+      "role": "OTHER"
+    }
+  ],
+  "teams": [
+    {
+      "side": "NEAR",
+      "isAnalysed": true
+    },
+    {
+      "side": "FAR",
+      "isAnalysed": false
+    }
+  ]
+}

@@ -211,3 +211,32 @@ def test_describe_summarises_without_reading_the_file_again() -> None:
     assert summary["analysedSide"] == "NEAR"
     assert summary["framesWithBall"] == 1
  
+# -- error messages -----------------------------------------------------------
+# Regression: the schema-version message was built in DatasetError.__init__, so
+# every malformed-file error claimed the file declared a bad version. The three
+# MalformedDatasetError tests above assert the type only, which is why the bug
+# passed them.
+
+
+def test_malformed_error_reports_its_own_message():
+    assert str(MalformedDatasetError("file is not valid JSON")) == (
+        "file is not valid JSON"
+    )
+
+
+def test_malformed_error_does_not_mention_schema_versions():
+    assert "schema version" not in str(MalformedDatasetError("missing field 'clip'"))
+
+
+def test_unsupported_version_error_names_the_version_and_the_supported_set():
+    message = str(UnsupportedSchemaVersionError("9.9.9"))
+    assert "9.9.9" in message
+    assert "0.1.0" in message
+
+
+def test_unsupported_version_error_keeps_the_found_version():
+    assert UnsupportedSchemaVersionError("9.9.9").found == "9.9.9"
+
+
+def test_the_two_dataset_errors_do_not_share_a_message():
+    assert str(MalformedDatasetError("x")) != str(UnsupportedSchemaVersionError("x"))

@@ -9,8 +9,9 @@ from src.courtmodel.model import (
 )
 
 __all__ = [
-    "AttackZone",
-    "Back_Row_SLOTS",
+    "BACK_ROW_SLOTS",
     "FRONT_ROW_SLOTS",
     "SLOT_COUNT",
+    "AttackZone",
+    "CourtModel",
 ]

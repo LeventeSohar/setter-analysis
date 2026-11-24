@@ -4,17 +4,24 @@ JSOn is used because the data is nested and ragged, and because a documented tex
 every file has the schema version
 """
 from __future__ import annotations
- 
+
 import argparse
 import json
 import sys
 from pathlib import Path
 from typing import Any
- 
+
 from .schema import SUPPORTED_SCHEMA_VERSIONS, Dataset
 
 class DatasetError(Exception):
-    """base class for every error raised while reading or writing a dataset"""
+    """Base class for every error raised while reading or writing a dataset.
+
+    Deliberately plain: it formats no message of its own. A base class that
+    builds one subclass's message makes every other subclass lie.
+    """
+
+class UnsupportedSchemaVersionError(DatasetError):
+    """Raised when a file declares a schema version this code cannot read."""
 
     def __init__(self, found: str) -> None:
         """Record the offending version and build a message naming it."""
@@ -25,15 +32,12 @@ class DatasetError(Exception):
         )
         self.found = found
 
-class UnsupportedSchemaVersionError(DatasetError):
-    """raised when a file declares a schema version this code cannot read"""
-
 class MalformedDatasetError(DatasetError):
     """raised when i file is not a valid JSON, or its missing required fileds"""
 
 def write_dataset(dataset: Dataset, path: Path | str, *, indent: int = 2) -> Path:
     """Write a dataset to ``path`` as JSON and return the path written.
- 
+
     Parent directories are created if they do not exist. ``indent`` controls
     readability only; it has no effect on what is read back.
     """
@@ -48,7 +52,7 @@ def write_dataset(dataset: Dataset, path: Path | str, *, indent: int = 2) -> Pat
 
 def read_dataset(path: Path | str) -> Dataset:
     """Read a dataset from ``path``.
- 
+
     Raises ``UnsupportedSchemaVersionError`` if the file declares a schema
     version this code does not support, and ``MalformedDatasetError`` if the
     file is not valid JSON or is missing required fields. The version is
@@ -59,16 +63,16 @@ def read_dataset(path: Path | str) -> Dataset:
         raw = json.loads(source.read_text(encoding="utf-8"))
     except json.JSONDecodeError as error:
         raise MalformedDatasetError(f"{source} is not valid JSON: {error}") from error
- 
+
     if not isinstance(raw, dict):
         raise MalformedDatasetError(f"{source} does not contain a JSON object")
- 
+
     version = raw.get("schemaVersion")
     if version is None:
         raise MalformedDatasetError(f"{source} has no schemaVersion field")
     if version not in SUPPORTED_SCHEMA_VERSIONS:
         raise UnsupportedSchemaVersionError(str(version))
- 
+
     try:
         return Dataset.from_dict(raw)
     except (KeyError, TypeError, ValueError) as error:
@@ -94,7 +98,7 @@ def describe(dataset: Dataset) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     """Validate a dataset file from the command line.
- 
+
     Reads the file, applies the version check and prints a summary. Returns 0
     when the file is readable and 1 when it is not.
     """
@@ -103,16 +107,16 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("input", type=Path, help="path to the dataset file to read")
     arguments = parser.parse_args(argv)
- 
+
     try:
         dataset = read_dataset(arguments.input)
     except DatasetError as error:
         print(f"error: {error}", file=sys.stderr)
         return 1
- 
+
     print(json.dumps(describe(dataset), indent=2))
     return 0
- 
- 
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
