@@ -24,6 +24,8 @@ SHIPPED_CONFIG = REPO_ROOT / "config" / "default.yaml"
 
 # Every key section 5 of CONTEXT.md declares, with the values it records.
 EXPECTED_SET_VALUES = {
+    "clip.min_duration": 2.0,
+    "clip.max_duration": 60.0,
     "rotation.reference_window_frames": 30,
     "rotation.min_track_observations": 1,
     "rotation.min_row_margin": 1.0,
@@ -48,7 +50,7 @@ def write_yaml(path: Path, text: str) -> Path:
     return path
 
 
-# -- flatten ------------------------------------------------------------------
+#flatten 
 
 
 def test_flatten_returns_dotted_keys():
@@ -84,7 +86,7 @@ def test_flatten_accepts_a_prefix():
     assert flatten({"b": 1}, prefix="a.") == {"a.b": 1}
 
 
-# -- the shipped default file -------------------------------------------------
+#the shipped default file 
 
 
 def test_shipped_config_loads():
@@ -92,7 +94,7 @@ def test_shipped_config_loads():
 
 
 def test_shipped_config_declares_thirteen_keys():
-    assert len(load_config(SHIPPED_CONFIG)) == 13
+    assert len(load_config(SHIPPED_CONFIG)) == 15
 
 
 @pytest.mark.parametrize("key, value", sorted(EXPECTED_SET_VALUES.items()))
@@ -128,7 +130,7 @@ def test_shipped_config_declares_no_court_dimensions():
     assert not [key for key in keys if "court" in key or "width" in key]
 
 
-# -- get ----------------------------------------------------------------------
+#get 
 
 
 def test_get_returns_a_set_value(tmp_path: Path):
@@ -195,7 +197,7 @@ def test_config_error_base_takes_a_plain_message():
     assert str(ConfigError("plain")) == "plain"
 
 
-# -- is_set, keys, container protocol -----------------------------------------
+#is_set, keys, container protocol 
 
 
 def test_is_set_is_true_for_a_value(tmp_path: Path):
@@ -245,7 +247,7 @@ def test_repr_reports_counts(tmp_path: Path):
     assert repr(config) == "Config(2 keys, 1 unset)"
 
 
-# -- overlay ------------------------------------------------------------------
+#overlay 
 
 
 def test_overlay_changes_a_declared_value(tmp_path: Path):
@@ -307,7 +309,7 @@ def test_overlay_can_set_a_value_to_null(tmp_path: Path):
         load_config(base, overlay=over).get("a")
 
 
-# -- file errors --------------------------------------------------------------
+#file errors 
 
 
 def test_missing_file_raises(tmp_path: Path):
@@ -352,7 +354,7 @@ def test_load_config_accepts_a_string_path(tmp_path: Path):
     assert load_config(str(path)).get("a") == 1
 
 
-# -- describe and CLI ---------------------------------------------------------
+#describe and CLI 
 
 
 def test_describe_reports_key_count_and_unset(tmp_path: Path):
@@ -370,7 +372,7 @@ def test_describe_uses_camel_case_keys(tmp_path: Path):
 
 def test_cli_exits_zero_on_the_shipped_config(capsys):
     assert main([str(SHIPPED_CONFIG)]) == 0
-    assert "13 keys declared, 9 not set" in capsys.readouterr().out
+    assert "15 keys declared, 9 not set" in capsys.readouterr().out
 
 
 def test_cli_marks_unset_keys(capsys):

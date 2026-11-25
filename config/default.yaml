@@ -7,7 +7,15 @@
 #
 # Court dimensions are deliberately absent. They are sport constants and live
 # as defaults on CourtModel (NFR-R5); NFR-R4 governs thresholds only.
-
+clip:
+  # Shortest plausible rally, in seconds. Below this the file is a fragment
+  # rather than a rally. Sanity bounds, not tuned values: real rallies run
+  # roughly 3 to 30 seconds and these leave room either side.
+  min_duration: 2.0
+  # Longest plausible rally, in seconds. Above this the file is more likely an
+  # uncut match or a timeout left on the main camera.
+  max_duration: 60.0
+  
 detector:
   # Minimum YOLO class confidence for a player or ball box to be kept.
   confidence: null
